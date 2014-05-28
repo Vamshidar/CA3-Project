@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html> 
 <head>
     <meta charset="utf-8">
@@ -23,6 +23,33 @@
 <!-- JS-->
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
 <!-- end JS-->
+
+<!-- Jquery plugin Datatable -->
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#example').dataTable({
+            "ajax": {
+                "url": "data/objects_root_array.txt",
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "name" },
+                { "data": "position" },
+                { "data": "office" },
+                { "data": "extn" },
+                { "data": "start_date" },
+                { "data": "salary" }
+            ]
+        });
+    });
+
+</script>
+
+<!-- End of Jquery -->
 
 </head>
 
@@ -82,15 +109,29 @@
 
 
 <!-- main content area -->   
-<div class="wrapper" id="main"> 
-    
-<!-- content area -->    
-    <section id="content">
-    
-                <h1>SERVICES OFFERED</h1>
-                <p>Software Training Center DATA TABLE QUERY</p>
-                
-
+<table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+ 
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </tfoot>
+</table>
 </section><!-- #end content area -->
       
 

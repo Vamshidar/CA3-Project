@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>SAP Training Center</title>
+    <meta name="description" content="World Class Training and Education with SAP">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+
+<!-- CSS-->
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="js/flexslider/flexslider.css" />
+<link rel="stylesheet" href="css/basic-style.css">
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+
+
+<!-- end CSS-->
+    
+<!-- JS-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+ 
+</head>
+
+<body id="home">
+  
+<!-- header area -->
+    <header class="wrapper clearfix">
+               
+        <div id="banner">        
+            <div id="logo"><a href="basic.html"><img src="images/basic-logo.jpg" ></a></div>
+        </div>
+        
+        <!-- main navigation -->
+        <nav id="topnav" role="navigation">
+        <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation">
+            <li><a href="basic.html">Home page</a></li>
+            <li><a href="basic-internal.html">About Us</a></li>
+            <li><a href="Modules.html">Training</a></li>
+            <li>
+                <a href="Services.html">Books</a>
+                
+            </li>
+            <li>
+                <a href="Contactus.html">Contact Us</a>
+            </li>   
+        </ul>     
+        </nav><!-- end main navigation -->
+  
+    </header><!-- end header -->
+ 
+ 
+<section id="page-header" class="clearfix">    
+<!-- responsive FlexSlider image slideshow -->
+<div class="wrapper">
+    
+
+<img src="images/services.jpg" />
+
+
+    </div>
+
+</section>
+
+
+<!-- main content area -->   
+<div class="wrapper" id="main"> 
+    
+<!-- content area -->    
+    <section id="content">
+    
+                <table id="example" class="table table-responsive table-striped ">
+    <thead>
+      <tr><th>Name</th><th>Author</th><th>Type</th><th>Description</th><th>Price</th></tr>
+    </thead>
+    <tbody">
+     </tbody>
+  </table>
+                
+
+</section><!-- #end content area -->
+      
+
+<!-- footer area -->    
+<footer>
+    <div id="colophon" class="wrapper clearfix">
+        <h1>Cources:</h1><br>
+        <img src="images/corporate_trainning_logo.jpg" />
+    </div>
+    
+    
+</footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#example').dataTable( {
+					 "bProcessing": true,
+                     "sAjaxSource": 'sources/JSON.txt'				 
+                     
+				} );
+			} );
+		</script>
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>

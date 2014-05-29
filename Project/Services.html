@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html> 
 <head>
     <meta charset="utf-8">
@@ -18,39 +18,16 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="js/flexslider/flexslider.css" />
 <link rel="stylesheet" href="css/basic-style.css">
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+
+
 <!-- end CSS-->
     
 <!-- JS-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
-<!-- end JS-->
-
-<!-- Jquery plugin Datatable -->
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery.dataTables.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('#example').dataTable({
-            "ajax": {
-                "url": "data/objects_root_array.txt",
-                "dataSrc": ""
-            },
-            "columns": [
-                { "data": "name" },
-                { "data": "position" },
-                { "data": "office" },
-                { "data": "extn" },
-                { "data": "start_date" },
-                { "data": "salary" }
-            ]
-        });
-    });
-
-</script>
-
-<!-- End of Jquery -->
-
+ 
 </head>
 
 <body id="home">
@@ -109,29 +86,20 @@
 
 
 <!-- main content area -->   
-<table id="example" class="display" cellspacing="0" width="100%">
+<div class="wrapper" id="main"> 
+    
+<!-- content area -->    
+    <section id="content">
+    
+                <table id="example" class="table table-responsive table-striped ">
     <thead>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Extn.</th>
-            <th>Start date</th>
-            <th>Salary</th>
-        </tr>
+      <tr><th>Name</th><th>Author</th><th>Type</th><th>Description</th><th>Price</th></tr>
     </thead>
- 
-    <tfoot>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Extn.</th>
-            <th>Start date</th>
-            <th>Salary</th>
-        </tr>
-    </tfoot>
-</table>
+    <tbody">
+     </tbody>
+  </table>
+                
+
 </section><!-- #end content area -->
       
 
@@ -151,7 +119,16 @@
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
 
 <script defer src="js/flexslider/jquery.flexslider-min.js"></script>
-
+<script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#example').dataTable( {
+					 "bProcessing": true,
+                     "sAjaxSource": 'sources/JSON.txt'				 
+                     
+				} );
+			} );
+		</script>
 <!-- fire ups - read this file!  -->   
 <script src="js/main.js"></script>
 

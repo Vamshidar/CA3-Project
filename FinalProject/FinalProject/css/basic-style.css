@@ -513,3 +513,25 @@ PRINT STYLESHEET
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+.google-maps {
+height: 400px;
+position: relative;
+padding-bottom: 75%; 
+height: 0;
+overflow: hidden;
+}
+.google-maps iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100% !important;
+height: 55% !important;
+}
+.entry
+{
+height:500px;
+}
+
+  
+}
